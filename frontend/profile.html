@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRD — Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">&#9670;</div>
+      <span class="brand-name">DRD</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html" class="active">Profile</a>
+    </div>
+    <div class="nav-right">
+      <div class="avatar" id="nav-avatar">JD</div>
+      <span class="nav-username" id="nav-username">Loading...</span>
+      <button class="logout-btn" onclick="logout()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>My Profile</h1>
+      <p>View and manage your personal account details.</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="profile-layout">
+
+      <!-- LEFT — AVATAR CARD -->
+      <div class="profile-left">
+        <div class="card profile-card">
+          <div class="profile-avatar" id="profile-avatar">JD</div>
+          <h3 id="profile-name">Loading...</h3>
+          <p id="profile-email-sub">Loading...</p>
+          <span class="badge">Active Employee</span>
+          <button class="action-btn" style="margin-top:16px; width:100%; justify-content:center" onclick="window.location.href='dashboard.html'">
+            <span>📊</span> Go to Dashboard
+          </button>
+          <button class="action-btn red" style="margin-top:8px; width:100%; justify-content:center" onclick="logout()">
+            <span>🚪</span> Sign Out
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT — DETAILS CARD -->
+      <div class="profile-right">
+        <div class="card">
+          <h3>Account Information</h3>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-label">Full Name</span>
+              <span class="info-value" id="info-name">Loading...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Email Address</span>
+              <span class="info-value" id="info-email">Loading...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Account Status</span>
+              <span class="info-value green">✅ Active</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Session</span>
+              <span class="info-value green">🔐 Secured via JWT</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Role</span>
+              <span class="info-value">Employee</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Last Login</span>
+              <span class="info-value" id="info-login">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECURITY CARD -->
+        <div class="card" style="margin-top: 20px">
+          <h3>Security</h3>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-label">Password</span>
+              <span class="info-value">••••••••</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Authentication</span>
+              <span class="info-value green">✅ JWT Enabled</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Encryption</span>
+              <span class="info-value green">✅ bcrypt hashed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 DRD. All rights reserved.</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

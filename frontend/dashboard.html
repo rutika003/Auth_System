@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CorpSecure — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">&#9670;</div>
+      <span class="brand-name">CorpSecure</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="profile.html">Profile</a>
+    </div>
+    <div class="nav-right">
+      <div class="avatar" id="nav-avatar">JD</div>
+      <span class="nav-username" id="nav-username">Loading...</span>
+      <button class="logout-btn" onclick="logout()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>Dashboard</h1>
+      <p>Here's what's happening with your account today.</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- STATS ROW -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-info">
+          <h4>Member Since</h4>
+          <p id="member-since">Loading...</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔐</div>
+        <div class="stat-info">
+          <h4>Session Status</h4>
+          <p class="green">Active & Secure</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📧</div>
+        <div class="stat-info">
+          <h4>Email</h4>
+          <p id="dash-email">Loading...</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👤</div>
+        <div class="stat-info">
+          <h4>Username</h4>
+          <p id="dash-username">Loading...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIVITY + QUICK ACTIONS -->
+    <div class="two-col">
+
+      <!-- RECENT ACTIVITY -->
+      <div class="card">
+        <h3>Recent Activity</h3>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-dot green"></div>
+            <div>
+              <p class="activity-title">Logged in successfully</p>
+              <p class="activity-time">Just now</p>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot blue"></div>
+            <div>
+              <p class="activity-title">Account created</p>
+              <p class="activity-time" id="created-time">Recently</p>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot grey"></div>
+            <div>
+              <p class="activity-title">Profile set up</p>
+              <p class="activity-time">Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="card">
+        <h3>Quick Actions</h3>
+        <div class="actions-list">
+          <button class="action-btn" onclick="window.location.href='profile.html'">
+            <span>👤</span> View My Profile
+          </button>
+          <button class="action-btn" onclick="window.location.href='home.html'">
+            <span>🏠</span> Go to Home
+          </button>
+          <button class="action-btn red" onclick="logout()">
+            <span>🚪</span> Sign Out
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 CorpSecure. All rights reserved.</p>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

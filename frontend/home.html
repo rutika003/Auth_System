@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRD — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">&#9670;</div>
+      <span class="brand-name">DRD</span>
+    </div>
+    <div class="nav-right">
+      <div class="avatar" id="nav-avatar">JD</div>
+      <span class="nav-username" id="nav-username">Loading...</span>
+      <button class="logout-btn" onclick="logout()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Company Portal</p>
+      <h1>Welcome back, <span id="hero-username">User</span>!</h1>
+      <p class="hero-sub">You are securely logged in. Access your tools, manage your profile, and stay connected with your team.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+        <button class="btn-secondary" onclick="window.location.href='profile.html'">View Profile</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-card">
+        <div class="card-top">
+          <div class="card-dot green"></div>
+          <span>Session Active</span>
+        </div>
+        <p class="card-email" id="card-email">you@company.com</p>
+        <p class="card-label">Logged in securely via JWT</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats">
+    <div class="stat-box">
+      <h3>🔐</h3>
+      <p class="stat-title">Encrypted</p>
+      <p class="stat-sub">Your session is fully secured</p>
+    </div>
+    <div class="stat-box">
+      <h3>☁️</h3>
+      <p class="stat-title">Cloud Stored</p>
+      <p class="stat-sub">Data saved in MongoDB Atlas</p>
+    </div>
+    <div class="stat-box">
+      <h3>⚡</h3>
+      <p class="stat-title">Fast Access</p>
+      <p class="stat-sub">Powered by Express.js backend</p>
+    </div>
+    <div class="stat-box">
+      <h3>✅</h3>
+      <p class="stat-title">Verified</p>
+      <p class="stat-sub">JWT token authentication</p>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section">
+    <h2>What you can do here</h2>
+    <p class="section-sub">Everything you need in one place</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">👤</div>
+        <h4>My Profile</h4>
+        <p>View and update your personal information and account settings.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h4>Dashboard</h4>
+        <p>Get an overview of your activity, tasks, and recent updates.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h4>Notifications</h4>
+        <p>Stay updated with company announcements and team messages.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h4>Security</h4>
+        <p>Manage your password, sessions, and account security settings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 DRD. All rights reserved.</p>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>

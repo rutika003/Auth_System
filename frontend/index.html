@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRD — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="auth-root">
+
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <div class="brand">
+        <div class="brand-icon">&#9670;</div>
+        <span class="brand-name">DRD</span>
+      </div>
+      <div class="left-content">
+        <h1>Welcome to the company portal</h1>
+        <p>Securely access your workspace, manage your account, and stay connected with your team.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="feature-dot"></div><span>End-to-end encrypted sessions</span></div>
+        <div class="feature"><div class="feature-dot"></div><span>Secure password hashing (bcrypt)</span></div>
+        <div class="feature"><div class="feature-dot"></div><span>JWT token-based authentication</span></div>
+        <div class="feature"><div class="feature-dot"></div><span>MongoDB persistent storage</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+      <div class="form-card">
+
+        <!-- AUTH FORM -->
+        <div id="auth-section">
+          <div class="form-header">
+            <h2 id="form-title">Sign in to your account</h2>
+            <p id="form-sub">Enter your credentials to continue</p>
+          </div>
+
+          <div class="tab-switch">
+            <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+            <button class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
+          </div>
+
+          <div id="msg" class="msg"></div>
+
+          <div class="field" id="username-field">
+            <label>Full Name</label>
+            <input type="text" id="username" placeholder="John Doe" />
+          </div>
+
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="you@company.com" />
+          </div>
+
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="••••••••" />
+          </div>
+
+          <button class="submit-btn" id="submit-btn" onclick="submitForm()">Sign In</button>
+
+          <div class="divider">or</div>
+          <div class="footer-note">By continuing, you agree to the company's terms of service.</div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="dashboard" id="dashboard">
+          <div class="avatar" id="avatar-initials">JD</div>
+          <h2>Welcome, <span id="user-name"></span>!</h2>
+          <p>You are securely signed into the company portal.</p>
+          <button class="logout-btn" onclick="logout()">Sign Out</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
