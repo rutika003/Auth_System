@@ -10,13 +10,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+console.log('Loading routes...');
+const authRoutes = require('./routes/auth');
+console.log('Routes loaded ✅');
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Server is running' });
@@ -30,6 +34,7 @@ if (!MONGO_URI) {
   process.exit(1);
 }
 
+console.log('Connecting to MongoDB...');
 mongoose.connect(MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully');
