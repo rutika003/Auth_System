@@ -1,13 +1,14 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}import express, { json, urlencoded } from 'express';
+import { connect } from 'mongoose';
+import cors from 'cors';
 
 const app = express();
 
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(json());
+app.use(urlencoded({ extended: true }));
 
 app.use('/api/auth', require('./routes/auth'));
 
@@ -23,7 +24,7 @@ if (!MONGO_URI) {
   process.exit(1);
 }
 
-mongoose.connect(MONGO_URI)
+connect(MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully');
     app.listen(PORT, '0.0.0.0', () => {
