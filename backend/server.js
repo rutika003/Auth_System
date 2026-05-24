@@ -2,6 +2,10 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
+console.log('Starting server...');
+console.log('MONGO_URI exists:', !!process.env.MONGO_URI);
+console.log('PORT:', process.env.PORT);
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
