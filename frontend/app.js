@@ -37,8 +37,8 @@ async function submitForm() {
   btn.textContent = 'Please wait...';
 
   const url  = isLogin
-    ? 'http://192.168.1.19:5000/api/auth/login'
-    : 'http://192.168.1.19:5000/api/auth/signup';
+    ? 'https://auth-system-l920.onrender.com/api/auth/login'
+    : 'https://auth-system-l920.onrender.com/api/auth/signup';
 
   const body = isLogin
     ? { email, password }
